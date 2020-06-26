@@ -31,12 +31,16 @@ h1 {
   color: hsl(335, 100%, 55%);
 }
 
+#grid-btn {
+  padding-left: 25px;
+}
+
 input {
   font-family: 'Roboto';
   margin: -10px -10px;
   padding: 10px;
   font-size: 16px;
-  margin-left: 18px;
+  margin-left: 20px;
   width: 58px;
   height: 40px;
   border: none;
