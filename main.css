@@ -92,14 +92,14 @@ button:focus {
 
 main {
   float: left;
-  padding: 16px 32px 16px 32px;
+  margin: 32px;
 }
 
 .grid-container {
-  margin: 16px 32px 16px 32px;
+  margin: 32px;
   float: right;
-  height: calc(100vh - 32px);
-  width: calc(100vh - 32px);
+  height: calc(100vh - 64px);
+  width: calc(100vh - 64px);
   display: flex;
   flex-wrap: wrap;
   box-shadow: -15px 15px 30px #cccfd0, 15px -15px 30px #ffffff;

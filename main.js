@@ -90,12 +90,21 @@ function draw(color) {
 function createGrid(gridContainer, width, height) {
   let cards = width * height;
   let vh = window.innerHeight;
+  let vw = window.innerWidth;
+
+  if (vh > vw) {
+    gridContainer.style.height = `${vw - 64}px`;
+    gridContainer.style.width = `${vw - 64}px`;
+
+    vh = vw;
+  }
 
   for (i = 0; i < cards; i++) {
     let card = document.createElement('div');
     card.classList.add('card');
-    card.style.height = `${(vh - 32) / height}px`;
-    card.style.width = `${(vh - 32) / width}px`;
+
+    card.style.height = `${(vh - 64) / height}px`;
+    card.style.width = `${(vh - 64) / width}px`;
 
     gridContainer.appendChild(card);
   }
