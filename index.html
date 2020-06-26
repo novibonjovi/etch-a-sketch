@@ -11,24 +11,34 @@
   </head>
   <body>
     <main>
-      <h1>Etch A Sketch</h1>
-      <div class="set-grid">
-        <button id="grid-btn">Grid</button>
-        <input id="grid-input" type="number" min="2" max="100" />
+      <h1 class="text-container">
+        <span class="title-1">Etch</span> <span class="title-2">A</span>
+        <br /><span class="title-3">Sketch</span>
+      </h1>
+      <div class="button-container" id="grid-btn">
+        Set Grid
+        <input id="grid-input" type="number" min="1" max="99" value="16" />
       </div>
-      <div class="set-black">
-        <button id="black-btn">Black</button>
-      </div>
-    </div>
-    <div class="set-white">
-      <button id="white-btn">White</button>
-    </div>
-      <div class="set-random">
-        <button id="random-btn">Random</button>
-      </div>
-      <div class="set-rainbow">
-        <button id="rainbow-btn">Rainbow</button>
-      </div>
+
+      <button class="button-container" id="black-btn">
+        <span class="color-black"></span>Black
+      </button>
+
+      <button class="button-container" id="white-btn">
+        <span class="color-white"></span>White
+      </button>
+
+      <button class="button-container" id="random-btn">
+        <span class="color-random"></span>Random
+      </button>
+
+      <button class="button-container" id="rainbow-btn">
+        <span class="color-rainbow"
+          ><span class="color-rain-1"></span><span class="color-rain-2"></span
+          ><span class="color-rain-3"></span
+          ><span class="color-rain-4"></span></span
+        >Rainbow
+      </button>
     </main>
     <div class="grid-container"></div>
     <script src="main.js"></script>

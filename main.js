@@ -2,7 +2,7 @@ const gridContainer = document.querySelector('.grid-container');
 let width = 16;
 let height = 16;
 let color = 'hsl(214, 12%, 15%)';
-let rainbow = true;
+let rainbow = false;
 
 const grid_btn = document.querySelector('#grid-btn');
 const grid_input = document.querySelector('#grid-input');
@@ -11,6 +11,7 @@ const white_btn = document.querySelector('#white-btn');
 const darken_btn = document.querySelector('#darken-btn');
 const random_btn = document.querySelector('#random-btn');
 const rainbow_btn = document.querySelector('#rainbow-btn');
+const colorRandom = document.querySelector('.color-random');
 
 grid_btn.addEventListener('click', function () {
   setGrid(Number(grid_input.value));
@@ -47,26 +48,41 @@ function random() {
 function blackMode() {
   rainbow = false;
   color = 'hsl(214, 12%, 15%)';
+
+  black_btn.classList.add('active');
+  white_btn.classList.remove('active');
+  rainbow_btn.classList.remove('active');
 }
 
 function whiteMode() {
   rainbow = false;
-  color = 'hsl(70, 80%, 95%)';
+  color = '#f0f3f5';
+
+  black_btn.classList.remove('active');
+  white_btn.classList.add('active');
+  rainbow_btn.classList.remove('active');
 }
 
 function randomMode() {
   rainbow = false;
   color = `rgb(${random()}, ${random()}, ${random()})`;
+  colorRandom.style.backgroundColor = color;
+  black_btn.classList.remove('active');
+  white_btn.classList.remove('active');
+  rainbow_btn.classList.remove('active');
 }
 
 function rainbowMode() {
   rainbow = true;
+
+  black_btn.classList.remove('active');
+  white_btn.classList.remove('active');
+  rainbow_btn.classList.add('active');
 }
 
 function draw(color) {
   if (rainbow) {
-    randomMode();
-    rainbow = true;
+    color = `rgb(${random()}, ${random()}, ${random()})`;
   }
   event.target.style.background = color;
 }
@@ -78,8 +94,8 @@ function createGrid(gridContainer, width, height) {
   for (i = 0; i < cards; i++) {
     let card = document.createElement('div');
     card.classList.add('card');
-    card.style.height = `${vh / height}px`;
-    card.style.width = `${vh / width}px`;
+    card.style.height = `${(vh - 32) / height}px`;
+    card.style.width = `${(vh - 32) / width}px`;
 
     gridContainer.appendChild(card);
   }

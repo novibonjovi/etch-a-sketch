@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Roboto:wght@400;700&display=swap');
+
 * {
+  cursor: default;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,26 +11,168 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-color: #f0f3f5;
+}
+
+h1 {
+  font-family: 'Balsamiq Sans';
+  font-size: 48px;
+}
+
+.title-1 {
+  color: hsl(325, 100%, 70%);
+}
+
+.title-2 {
+  color: hsl(320, 100%, 65%);
+}
+
+.title-3 {
+  color: hsl(335, 100%, 55%);
+}
+
+input {
+  font-family: 'Roboto';
+  margin: -10px -10px;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 18px;
+  width: 58px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f3f5;
+  box-shadow: inset -3px 3px 6px #cccfd0, inset 3px -3px 6px #ffffff;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  font-family: 'Roboto';
+  font-size: 16px;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-container {
+  font-family: 'Roboto';
+  cursor: pointer;
+  display: flex;
+  margin-top: 30px;
+  background-color: #f0f3f5;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: -5px 5px 10px #cccfd0, 5px -5px 10px #ffffff;
+}
+
+.button-container:hover {
+  background-color: #eaeef1;
+}
+
+#random-btn:active,
+#grid-btn:active {
+  box-shadow: inset -5px 5px 10px #cccfd0, inset 5px -5px 10px #ffffff;
+  background-color: #f0f3f5;
+}
+
+.text-container {
+  background-color: #f0f3f5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset -5px 5px 10px #cccfd0, inset 5px -5px 10px #ffffff;
 }
 
 main {
   float: left;
+  padding: 16px 32px 16px 32px;
 }
 
 .grid-container {
+  margin: 16px 32px 16px 32px;
   float: right;
-  height: 100vh;
-  width: 100vh;
+  height: calc(100vh - 32px);
+  width: calc(100vh - 32px);
   display: flex;
   flex-wrap: wrap;
+  box-shadow: -15px 15px 30px #cccfd0, 15px -15px 30px #ffffff;
 }
 
 .card {
   height: calc(100vh / 16);
   width: calc(100vh / 16);
-  background-color: hsl(70, 80%, 95%);
+  background-color: #f0f3f5;
 }
 
 .active {
-  background-color: darkmagenta;
+  box-shadow: inset -5px 5px 10px #cccfd0, inset 5px -5px 10px #ffffff;
+}
+
+.active:hover {
+  background-color: #f0f3f5;
+  cursor: default;
+}
+
+.color-black,
+.color-white,
+.color-random,
+.color-rainbow {
+  margin-top: -4px;
+  margin-bottom: -4px;
+  height: 24px;
+  width: 24px;
+  border-radius: 3px;
+  margin-right: 20px;
+  margin-left: 20px;
+  box-shadow: -3px 3px 6px #cccfd0, 3px -3px 6px #ffffff;
+}
+
+.color-black {
+  background-color: hsl(214, 12%, 15%);
+  border: 1px solid hsl(214, 12%, 15%);
+}
+.color-white {
+  background-color: #f0f3f5;
+  border: 1px solid hsl(214, 12%, 15%);
+}
+.color-random {
+  background-color: hsl(214, 12%, 15%);
+  border: 1px solid hsl(214, 12%, 15%);
+}
+.color-rainbow {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid hsl(214, 12%, 15%);
+}
+
+.color-rain-1 {
+  background-color: #fb0066;
+  border-top-left-radius: 2px;
+  height: 11px;
+  width: 11px;
+}
+.color-rain-2 {
+  background-color: #4de2ed;
+  border-top-right-radius: 2px;
+  height: 11px;
+  width: 11px;
+}
+.color-rain-3 {
+  background-color: #9af14e;
+  border-bottom-left-radius: 2px;
+  height: 11px;
+  width: 11px;
+}
+.color-rain-4 {
+  background-color: #fd9053;
+  border-bottom-right-radius: 2px;
+  height: 11px;
+  width: 11px;
 }
